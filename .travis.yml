@@ -6,4 +6,4 @@ before_install:
   - docker build -t mickeyliu/react-project -f Dockerfile.dev .
 
 script:
-  - docker run mickeyliu/react-project -- --coverage
+  - docker run mickeyliu/react-project npm run test -- --coverage
