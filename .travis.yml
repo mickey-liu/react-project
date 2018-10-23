@@ -3,4 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -f Dockerfile.dev .
+  - docker build -t mickeyliu/react-project -f Dockerfile.dev .
+
+script:
+  - docker run mickeyliu/react-project -- --coverage
